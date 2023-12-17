@@ -4,7 +4,7 @@
             "name": "Win32",
             "includePath": [
                 "${workspaceFolder}/**",
-                "D:\\Programs\\msys2\\home\\Shin\\OpenGL\\include"
+                "D:/Documents/OpenGL/include"
             ],
             "defines": [
                 "_DEBUG",
