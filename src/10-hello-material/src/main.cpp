@@ -81,7 +81,7 @@ int main()
 
     // build and compile our shader zprogram
     // ------------------------------------
-    Shader lightShader("../shaders/1.colors.vs", "../shaders/1.colors.fs");
+    Shader lightingShader("../shaders/1.colors.vs", "../shaders/1.colors.fs");
     Shader lightCubeShader("../shaders/1.light_cub.vs", "../shaders/1.light_cube.fs");
 
     // set up vertex data (and buffer(s)) and configure vertex attributes
@@ -191,29 +191,30 @@ int main()
         // lightPos.z = lightPos.y * cos(glfwGetTime());
 
         // activate shader when setting uniform/drawing objects
-        lightShader.use();
-        lightShader.setVec3("viewPos", camera.Position);
-        lightShader.setVec3("light.position", lightPos);
-        // lightShader.setVec3("lightColor", 1.0f, 1.0f, 1.0f);
-        lightShader.setVec3("light.ambient",  1.0f, 1.0f, 1.0f);
-        lightShader.setVec3("light.diffuse",  0.5f, 0.5f, 0.5f); // 将光照调暗了一些以搭配场景
-        lightShader.setVec3("light.specular", 1.0f, 1.0f, 1.0f); 
-        // lightShader.setVec3("objectColor", 1.0f, 0.5f, 0.31f);
-        lightShader.setVec3("material.ambient",  0.0215f,0.1745f, 0.0215f);
-        lightShader.setVec3("material.diffuse",  0.07568f, 0.61424f,0.07568f);
-        lightShader.setVec3("material.specular", 0.633f,0.727811f,0.633f);
-        lightShader.setFloat("material.shininess", 0.6f*128);
+        lightingShader.use();
+        lightingShader.setVec3("viewPos", camera.Position);
+        lightingShader.setVec3("light.position", lightPos);
 
+        // lightingShader.setVec3("lightColor", 1.0f, 1.0f, 1.0f);
+        lightingShader.setVec3("light.ambient",  1.0f, 1.0f, 1.0f);
+        lightingShader.setVec3("light.diffuse",  1.0f, 1.0f, 1.0f);
+        lightingShader.setVec3("light.specular", 1.0f, 1.0f, 1.0f); 
+
+        // lightingShader.setVec3("objectColor", 1.0f, 0.5f, 0.31f);
+        lightingShader.setVec3("material.ambient", 0.0f, 0.1f, 0.06f);
+        lightingShader.setVec3("material.diffuse", 0.0f, 0.50980392f, 0.50980392f);
+        lightingShader.setVec3("material.specular", 0.50196078f, 0.50196078f, 0.50196078f);
+        lightingShader.setFloat("material.shininess", 32.0f);
 
         // view/projection transformations
         glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH/(float)SCR_HEIGHT, 0.1f, 100.0f);
         glm::mat4 view = camera.GetViewMatrix();
-        lightShader.setMat4("projection", projection);
-        lightShader.setMat4("view", view);
+        lightingShader.setMat4("projection", projection);
+        lightingShader.setMat4("view", view);
 
         // world transformation
         glm::mat4 model = glm::mat4(1.0f);
-        lightShader.setMat4("model", model);
+        lightingShader.setMat4("model", model);
 
         // render the cube
         glBindVertexArray(cubeVAO);
