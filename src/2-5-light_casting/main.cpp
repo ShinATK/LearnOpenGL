@@ -21,6 +21,8 @@
 #include <tools/stb_image.h>
 #include <tools/camera.h>
 #include <tools/shader.h>
+#include <DefaultSettings/DefaultSettings.h>
+#include <tools/folder_relative_path.h>
 
 #include <iostream>
 #include <stdio.h>
@@ -129,8 +131,12 @@ int main()
 
 
     // TODO：着色器、编译、链接
-    Shader cubeShader("shader/2-5-cube_vertex.glsl", "shader/2-5-cube_frag.glsl");
-    Shader lightShader("shader/2-5-light_vertex.glsl", "shader/2-5-light_frag.glsl");
+    Shader cubeShader(
+        relativePath(FILE_FOLDER_PATH, "shader/2-5-cube_vertex.glsl"), 
+        relativePath(FILE_FOLDER_PATH, "shader/2-5-cube_frag.glsl"));
+    Shader lightShader(
+        relativePath(FILE_FOLDER_PATH, "shader/2-5-light_vertex.glsl"), 
+        relativePath(FILE_FOLDER_PATH, "shader/2-5-light_frag.glsl"));
 
 
     // TODO：设置顶点坐标

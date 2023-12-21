@@ -24,6 +24,8 @@
 #include <tools/stb_image.h>
 #include <tools/shader.h>
 #include <tools/camera.h>
+#include <tools/folder_relative_path.h>
+#include <DefaultSettings/DefaultSettings.h>
 
 using namespace std;
 
@@ -127,8 +129,12 @@ int main()
     }
 
     // TODO：着色器、编译、链接
-    Shader cubeShader("shader/cube_vertex.glsl", "shader/cube_frag.glsl");
-    Shader lightShader("shader/light_vertex.glsl", "shader/light_frag.glsl");
+    Shader cubeShader(
+        relativePath(FILE_FOLDER_PATH, "shader/cube_vertex.glsl"), 
+        relativePath(FILE_FOLDER_PATH, "shader/cube_frag.glsl"));
+    Shader lightShader(
+        relativePath(FILE_FOLDER_PATH, "shader/light_vertex.glsl"), 
+        relativePath(FILE_FOLDER_PATH, "shader/light_frag.glsl"));
 
     // TODO：设置顶点坐标
     float vertices[] = {
@@ -216,9 +222,9 @@ int main()
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)0);                   // 顶点坐标
     glEnableVertexAttribArray(0);
 
-    unsigned int diffuseMap = loadTexture("texture/container2.png");
-    unsigned int specularMap = loadTexture("texture/container2_specular.png");
-    unsigned int spotLight_diffuseMap = loadTexture("texture/kisaki_good.jpg");
+    unsigned int diffuseMap = loadTexture(relativePath(FILE_FOLDER_PATH, "texture/container2.png"));
+    unsigned int specularMap = loadTexture(relativePath(FILE_FOLDER_PATH, "texture/container2_specular.png"));
+    unsigned int spotLight_diffuseMap = loadTexture(relativePath(FILE_FOLDER_PATH, "texture/kisaki_good.jpg"));
     
     // 激活着色器程序
     cubeShader.use();
@@ -496,10 +502,8 @@ static void glfw_error_callback(int error, const char* description)
 }
 
 
-unsigned int loadTexture(const char *Path)
+unsigned int loadTexture(const char *path)
 {  
-
-    const char * path = relativePath(FILE_FOLDER_PATH, Path);
     unsigned int textureID;
     glGenTextures(1, &textureID);
     

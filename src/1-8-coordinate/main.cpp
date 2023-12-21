@@ -20,6 +20,8 @@
 #define STB_IMAGE_IMPLEMENTATION
 #include <tools/stb_image.h>
 #include <tools/shader.h>
+#include <tools/folder_relative_path.h>
+#include <DefaultSettings/DefaultSettings.h>
 
 #include <cmath>
 #include <iostream>
@@ -96,7 +98,9 @@ int main()
 
 
     // TODO：着色器、编译、链接
-    Shader shader("shader/1-8-coordinate-vertex.glsl", "shader/1-8-coordinate-fragment.glsl");
+    Shader shader(
+        relativePath(FILE_FOLDER_PATH, "shader/1-8-coordinate-vertex.glsl"), 
+        relativePath(FILE_FOLDER_PATH, "shader/1-8-coordinate-fragment.glsl"));
 
 
     // TODO：设置顶点坐标
