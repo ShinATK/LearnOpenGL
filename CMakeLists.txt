@@ -10,7 +10,7 @@ aux_source_directory(./include/glad DIR_ALL_SRC)
 
 #--------------------------------------------------
 # 设置目标文件夹
-set(FOLDERNAME 2-5-light_casting)
+set(FOLDERNAME 3-3-model)
 #--------------------------------------------------
 # 设置相对路径
 # set(ImgPath "${PROJECT_SOURCE_DIR}/img/")
@@ -18,8 +18,9 @@ set(FOLDERNAME 2-5-light_casting)
 # set(TexturePath "${PROJECT_SOURCE_DIR}/texture/")
 # 目标文件下的文件夹路径
 set(FileFolderPath "${PROJECT_SOURCE_DIR}/src/${FOLDERNAME}/")
-set(ShaderRelativePath "${PROJECT_SOURCE_DIR}/src/${FOLDERNAME}/shader/")
-set(TextureRelativePath "${PROJECT_SOURCE_DIR}/src/${FOLDERNAME}/texture/")
+set(WorkFolderPath "${PROJECT_SOURCE_DIR}/")
+# set(ShaderRelativePath "${PROJECT_SOURCE_DIR}/src/${FOLDERNAME}/shader/")
+# set(TextureRelativePath "${PROJECT_SOURCE_DIR}/src/${FOLDERNAME}/texture/")
 # 配置文件
 configure_file(
     "${PROJECT_SOURCE_DIR}/config/DefaultSettings.h.in"
