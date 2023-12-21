@@ -1,0 +1,7 @@
+#ifndef __DEFAULT_SETTINGS_H_
+#define __DEFAULT_SETTINGS_H_
+
+#define SHADERPATH "@ShaderPath@"
+#define IMGPATH "@ImgPath@"
+
+#endif //__DEFAULT_SETTINGS_H_
