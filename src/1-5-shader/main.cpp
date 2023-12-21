@@ -43,7 +43,7 @@ int main()
     }
 
     // 着色器
-    Shader shader(relativePath(SHADERPATH, "vertex.glsl"), relativePath(SHADERPATH, "fragment.glsl"));
+    Shader shader(relativePath(SHADER_RELATIVE_PATH, "vertex.glsl"), relativePath(SHADER_RELATIVE_PATH, "fragment.glsl"));
 
     // 顶点坐标
     float vertices[] = {

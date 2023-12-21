@@ -129,8 +129,8 @@ int main()
     }
 
     // TODO：着色器、编译、链接
-    Shader cubeShader(relativePath(SHADERPATH, "cube_vertex.glsl"), relativePath(SHADERPATH, "cube_frag.glsl"));
-    Shader lightShader(relativePath(SHADERPATH, "light_vertex.glsl"), relativePath(SHADERPATH, "light_frag.glsl"));
+    Shader cubeShader(relativePath(SHADER_RELATIVE_PATH, "cube_vertex.glsl"), relativePath(SHADER_RELATIVE_PATH, "cube_frag.glsl"));
+    Shader lightShader(relativePath(SHADER_RELATIVE_PATH, "light_vertex.glsl"), relativePath(SHADER_RELATIVE_PATH, "light_frag.glsl"));
 
     // TODO：设置顶点坐标
     float vertices[] = {
@@ -218,9 +218,9 @@ int main()
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)0);                   // 顶点坐标
     glEnableVertexAttribArray(0);
 
-    unsigned int diffuseMap = loadTexture(relativePath(IMGPATH, "container2.png"));
-    unsigned int specularMap = loadTexture(relativePath(IMGPATH, "container2_specular.png"));
-    unsigned int spotLight_diffuseMap = loadTexture(relativePath(IMGPATH, "kisaki_good.jpg"));
+    unsigned int diffuseMap = loadTexture(relativePath(TEXTURE_PATH, "container2.png"));
+    unsigned int specularMap = loadTexture(relativePath(TEXTURE_PATH, "container2_specular.png"));
+    unsigned int spotLight_diffuseMap = loadTexture(relativePath(TEXTURE_PATH, "kisaki_good.jpg"));
     
     // 激活着色器程序
     cubeShader.use();

@@ -8,11 +8,11 @@ aux_source_directory(./include/glad DIR_ALL_SRC)
 
 #--------------------------------------------------
 # 设置目标文件夹
-set(FOLDERNAME 1-5-shader)
+set(FOLDERNAME 2-6-multiple_light)
 #--------------------------------------------------
 # 设置相对路径
-set(ShaderPath "${PROJECT_SOURCE_DIR}/src/${FOLDERNAME}/shader")
-set(ImgPath "${PROJECT_SOURCE_DIR}/src/${FOLDERNAME}/img")
+set(ShaderRelativePath "${PROJECT_SOURCE_DIR}/src/${FOLDERNAME}/shader")
+set(TexturePath "${PROJECT_SOURCE_DIR}/texture")
 configure_file(
     "${PROJECT_SOURCE_DIR}/config/DefaultSettings.h.in"
     "${PROJECT_SOURCE_DIR}/include/DefaultSettings/DefaultSettings.h"
