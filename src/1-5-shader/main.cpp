@@ -4,7 +4,6 @@
 #include <iostream>
 
 #include <tools/shader.h>
-#include <tools/folder_relative_path.h>
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void processInput(GLFWwindow* window);
@@ -43,7 +42,7 @@ int main()
     }
 
     // 着色器
-    Shader shader(relativePath(SHADER_RELATIVE_PATH, "vertex.glsl"), relativePath(SHADER_RELATIVE_PATH, "fragment.glsl"));
+    Shader shader("shader/1-5-shader-vertex.glsl", "shader/1-5-shader-fragment.glsl");
 
     // 顶点坐标
     float vertices[] = {
