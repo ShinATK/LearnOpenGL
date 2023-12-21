@@ -12,15 +12,19 @@
 #include <sstream>
 #include <iostream>
 
+#include <DefaultSettings/DefaultSettings.h>
+#include <tools/folder_relative_path.h>
+
 class Shader
 {
 public:
 	// 程序ID
 	unsigned int ID;
 	// 构造器
-	Shader(const char* vertexPath, const char* fragmentPath)
+	Shader(const char* vertex_path, const char* fragment_path)
 	{
-	
+		const char* vertexPath = relativePath(FILE_FOLDER_PATH, vertex_path);
+		const char* fragmentPath = relativePath(FILE_FOLDER_PATH, fragment_path);
 		// 1.从文件路径中获取顶点/片段着色器
 		std::string vertexCode;
 		std::string fragmentCode;

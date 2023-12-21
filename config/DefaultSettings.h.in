@@ -1,9 +1,13 @@
 #ifndef __DEFAULT_SETTINGS_H_
 #define __DEFAULT_SETTINGS_H_
 
-#define SHADER_RELATIVE_PATH "@ShaderRelativePath@"
-#define SHADER_PATH "@ShaderPath@"
 #define IMG_PATH "@ImgPath@"
+#define SHADER_PATH "@ShaderPath@"
 #define TEXTURE_PATH "@TexturePath@"
+
+#define FILE_FOLDER_PATH "@FileFolderPath@"
+#define SHADER_RELATIVE_PATH "@ShaderRelativePath@"
+#define TEXTURE_RELATIVE_PATH "@TextureRelativePath@"
+
 
 #endif //__DEFAULT_SETTINGS_H_
