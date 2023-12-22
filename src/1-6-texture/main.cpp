@@ -19,8 +19,7 @@
 #define STB_IMAGE_IMPLEMENTATION
 #include <tools/stb_image.h>
 #include <tools/shader.h>
-#include <tools/folder_relative_path.h>
-#include <DefaultSettings/DefaultSettings.h>
+#include <tools/pathSettings.h>
 
 using namespace std;
 

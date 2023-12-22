@@ -23,8 +23,8 @@ set(WorkFolderPath "${PROJECT_SOURCE_DIR}/")
 # set(TextureRelativePath "${PROJECT_SOURCE_DIR}/src/${FOLDERNAME}/texture/")
 # 配置文件
 configure_file(
-    "${PROJECT_SOURCE_DIR}/config/DefaultSettings.h.in"
-    "${PROJECT_SOURCE_DIR}/include/DefaultSettings/DefaultSettings.h"
+    "${PROJECT_SOURCE_DIR}/config/pathSettings.h.in"
+    "${PROJECT_SOURCE_DIR}/include/tools/pathSettings.h"
 )
 #--------------------------------------------------
 aux_source_directory(./src/${FOLDERNAME} DIR_ALL_SRC)				   #src目录下所有文件取个DIR_ALL_SRC名字

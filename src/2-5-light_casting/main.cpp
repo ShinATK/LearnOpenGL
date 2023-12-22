@@ -21,8 +21,7 @@
 #include <tools/stb_image.h>
 #include <tools/camera.h>
 #include <tools/shader.h>
-#include <DefaultSettings/DefaultSettings.h>
-#include <tools/folder_relative_path.h>
+#include <tools/pathSettings.h>
 
 #include <iostream>
 #include <stdio.h>

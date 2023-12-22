@@ -10,5 +10,13 @@
 // #define SHADER_RELATIVE_PATH ""
 // #define TEXTURE_RELATIVE_PATH ""
 
+#include <iostream>
+using namespace std;
+
+const char * relativePath(string path, string name)
+{
+    return (path + name).c_str();
+}
+
 
 #endif //__DEFAULT_SETTINGS_H_
