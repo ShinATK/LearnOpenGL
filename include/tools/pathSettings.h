@@ -6,7 +6,7 @@
 // #define TEXTURE_PATH ""
 
 #define WORK_FOLDER_PATH "D:/Documents/VSCode/LearnOpenGL/"
-#define FILE_FOLDER_PATH "D:/Documents/VSCode/LearnOpenGL/src/3-3-model/"
+#define FILE_FOLDER_PATH "D:/Documents/VSCode/LearnOpenGL/src/4-3-blend_testing/"
 // #define SHADER_RELATIVE_PATH ""
 // #define TEXTURE_RELATIVE_PATH ""
 
