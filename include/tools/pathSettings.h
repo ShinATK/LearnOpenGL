@@ -6,9 +6,9 @@
 // #define TEXTURE_PATH ""
 
 #define WORK_FOLDER_PATH "D:/Documents/VSCode/LearnOpenGL/"
-#define FILE_FOLDER_PATH "D:/Documents/VSCode/LearnOpenGL/src/4-3-blend_testing/"
+#define FILE_FOLDER_PATH "D:/Documents/VSCode/LearnOpenGL/src/4-6-cubemaps/"
 // #define SHADER_RELATIVE_PATH ""
-// #define TEXTURE_RELATIVE_PATH ""
+#define TEXTURE_RELATIVE_PATH "D:/Documents/VSCode/LearnOpenGL/src/4-6-cubemaps/texture/"
 
 #include <iostream>
 using namespace std;

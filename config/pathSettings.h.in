@@ -8,7 +8,7 @@
 #define WORK_FOLDER_PATH "@WorkFolderPath@"
 #define FILE_FOLDER_PATH "@FileFolderPath@"
 // #define SHADER_RELATIVE_PATH "@ShaderRelativePath@"
-// #define TEXTURE_RELATIVE_PATH "@TextureRelativePath@"
+#define TEXTURE_RELATIVE_PATH "@TextureRelativePath@"
 
 #include <iostream>
 using namespace std;

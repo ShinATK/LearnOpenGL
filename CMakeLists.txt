@@ -10,7 +10,7 @@ aux_source_directory(./include/glad DIR_ALL_SRC)
 
 #--------------------------------------------------
 # 设置目标文件夹
-set(FOLDERNAME 4-3-blend_testing)
+set(FOLDERNAME 4-6-cubemaps)
 #--------------------------------------------------
 # 设置相对路径
 # set(ImgPath "${PROJECT_SOURCE_DIR}/img/")
@@ -20,7 +20,7 @@ set(FOLDERNAME 4-3-blend_testing)
 set(FileFolderPath "${PROJECT_SOURCE_DIR}/src/${FOLDERNAME}/")
 set(WorkFolderPath "${PROJECT_SOURCE_DIR}/")
 # set(ShaderRelativePath "${PROJECT_SOURCE_DIR}/src/${FOLDERNAME}/shader/")
-# set(TextureRelativePath "${PROJECT_SOURCE_DIR}/src/${FOLDERNAME}/texture/")
+set(TextureRelativePath "${PROJECT_SOURCE_DIR}/src/${FOLDERNAME}/texture/")
 # 配置文件
 configure_file(
     "${PROJECT_SOURCE_DIR}/config/pathSettings.h.in"
